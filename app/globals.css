@@ -1,0 +1,285 @@
+@import "tailwindcss";
+
+:root {
+  --br-black:     #111111;
+  --br-dark:      #333333;
+  --br-mid:       #666666;
+  --br-muted:     #999999;
+  --br-light:     #CCCCCC;
+  --br-rule:      #E5E5E5;
+  --br-bg:        #FAFAFA;
+  --br-white:     #FFFFFF;
+  --br-accent:    #2563EB;
+
+  --br-font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', Menlo, Consolas, monospace;
+  --br-font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --br-max-width: 720px;
+  --br-max-width-wide: 840px;
+}
+
+@theme inline {
+  --color-background: var(--br-bg);
+  --color-foreground: var(--br-black);
+  --font-sans: var(--br-font-sans);
+  --font-mono: var(--br-font-mono);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--br-bg);
+  color: var(--br-dark);
+  font-family: var(--br-font-sans);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+/* ── Typography ── */
+h1, h2, h3 {
+  color: var(--br-black);
+  line-height: 1.3;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--br-rule);
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--br-accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+code {
+  font-family: var(--br-font-mono);
+  font-size: 0.875em;
+  background: rgba(0,0,0,0.05);
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+}
+
+pre {
+  font-family: var(--br-font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  background: var(--br-black);
+  color: #E5E5E5;
+  padding: 1.5rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1rem 0 1.5rem;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ── Layout ── */
+.page-container {
+  max-width: var(--br-max-width);
+  margin: 0 auto;
+  padding: 3rem 1.5rem 6rem;
+}
+
+.page-container-wide {
+  max-width: var(--br-max-width-wide);
+  margin: 0 auto;
+  padding: 3rem 1.5rem 6rem;
+}
+
+/* ── Vocab definition card ── */
+.property-card {
+  margin-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--br-rule);
+}
+
+.property-card:last-child {
+  border-bottom: none;
+}
+
+.property-name {
+  font-family: var(--br-font-mono);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--br-black);
+}
+
+.property-meta {
+  font-size: 0.8125rem;
+  color: var(--br-muted);
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.property-meta span {
+  display: inline-block;
+  margin-right: 1.5rem;
+}
+
+.tier-badge {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.15em 0.5em;
+  border-radius: 3px;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+
+.tier-foundation {
+  background: #E0F2FE;
+  color: #0369A1;
+}
+
+.tier-extended {
+  background: #F3E8FF;
+  color: #7C3AED;
+}
+
+.avoid-list {
+  background: #FFF7ED;
+  border-left: 3px solid #F59E0B;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.875rem;
+}
+
+.avoid-list p {
+  margin: 0 0 0.25rem;
+  font-weight: 600;
+  color: var(--br-dark);
+}
+
+.avoid-list ul {
+  margin: 0.25rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.avoid-list li {
+  margin-bottom: 0.2rem;
+}
+
+/* ── Nav ── */
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--br-rule);
+  background: var(--br-white);
+  font-size: 0.8125rem;
+}
+
+.site-nav a {
+  color: var(--br-mid);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.site-nav a:hover {
+  color: var(--br-black);
+  text-decoration: none;
+}
+
+.nav-brand {
+  font-weight: 700;
+  color: var(--br-black) !important;
+  font-size: 0.875rem;
+  letter-spacing: -0.01em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.75rem;
+  align-items: center;
+}
+
+/* ── Footer ── */
+.site-footer {
+  border-top: 1px solid var(--br-rule);
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--br-muted);
+  line-height: 1.6;
+}
+
+/* ── Spec sections ── */
+.spec-section {
+  margin-top: 2rem;
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  margin: 1rem 0;
+}
+
+.spec-table th,
+.spec-table td {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--br-rule);
+}
+
+.spec-table th {
+  font-weight: 600;
+  color: var(--br-black);
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.spec-table code {
+  font-size: 0.8125rem;
+}
+
+/* ── Version pill on homepage ── */
+.version-pill {
+  display: inline-block;
+  font-family: var(--br-font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--br-rule);
+  color: var(--br-mid);
+  padding: 0.2em 0.6em;
+  border-radius: 3px;
+  margin-bottom: 1.5rem;
+}
