@@ -10,6 +10,7 @@ export default function Nav() {
         <Link href="/vocab">Vocabulary</Link>
         <Link href="/spec">Specification</Link>
         <Link href="/implement">Implement</Link>
+        <Link href="/brand">Brand</Link>
       </div>
     </nav>
   );
