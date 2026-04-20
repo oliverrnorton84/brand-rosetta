@@ -7,7 +7,7 @@ import { organisationJsonLd } from "../lib/jsonld";
 
 export const metadata: Metadata = {
   title: {
-    default: "Brand Rosetta",
+    default: "Brand Rosetta — Open Vocabulary Standard for Brand AI Readiness",
     template: "%s | Brand Rosetta",
   },
   description:

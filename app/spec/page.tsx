@@ -3,7 +3,7 @@ import JsonLd from "../components/JsonLd";
 import { pageJsonLd } from "../../lib/jsonld";
 
 export const metadata: Metadata = {
-  title: "Specification",
+  title: "Specification — v0.1 Initial Proposal",
   description:
     "The complete Brand Rosetta v0.1 specification — an open vocabulary extension to schema.org JSON-LD for brand AI readiness.",
 };

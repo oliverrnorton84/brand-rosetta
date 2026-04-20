@@ -3,7 +3,7 @@ import JsonLd from "../components/JsonLd";
 import { pageJsonLd } from "../../lib/jsonld";
 
 export const metadata: Metadata = {
-  title: "Implement",
+  title: "Implementation Guide — Copy-paste Examples",
   description:
     "Copy-paste JSON-LD examples for implementing Brand Rosetta on Organisation and Product pages.",
 };

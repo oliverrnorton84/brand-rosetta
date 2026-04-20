@@ -3,7 +3,7 @@ import JsonLd from "../components/JsonLd";
 import { pageJsonLd } from "../../lib/jsonld";
 
 export const metadata: Metadata = {
-  title: "Vocabulary",
+  title: "Vocabulary Reference — 21 Properties",
   description:
     "Full property reference for the Brand Rosetta open vocabulary standard.",
 };
