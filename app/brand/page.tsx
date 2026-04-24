@@ -5,7 +5,7 @@ import { pageJsonLd } from "../../lib/jsonld";
 export const metadata: Metadata = {
   title: "Brand Identity — Visible HTML Mirror",
   description:
-    "Brand Rosetta's own brand identity rendered as visible HTML — a plain-text mirror of the Organization-level rosetta: properties declared in JSON-LD elsewhere on the site.",
+    "Brand Rosetta's Organization-level rosetta: properties rendered as visible HTML — a plain-text mirror of the JSON-LD declared elsewhere.",
 };
 
 export default function BrandPage() {
